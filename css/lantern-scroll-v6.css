@@ -1,0 +1,264 @@
+/* ========================================================
+   THE DETECTIVE CORPS — GREEN LANTERN DECORATIONS V6
+   ======================================================== */
+
+body.dc-lantern-v6-page {
+    overflow-x: clip;
+}
+
+body.dc-lantern-v6-page main.subpage-main {
+    position: relative;
+    isolation: isolate;
+    overflow: visible;
+}
+
+/* Keep actual content above decorative images */
+
+body.dc-lantern-v6-page main.subpage-main > :not(.dc-lantern-decor) {
+    position: relative;
+    z-index: 1;
+}
+
+/* CHARACTER BASE STYLING */
+
+body.dc-lantern-v6-page .dc-lantern-decor {
+    position: absolute;
+    z-index: 0;
+    display: block;
+
+    width: clamp(260px, 29vw, 405px);
+    height: auto;
+
+    margin: 0;
+    padding: 0;
+
+    pointer-events: none;
+    user-select: none;
+
+    opacity: 0;
+    filter: blur(8px);
+
+    transform: translate3d(
+        var(--dc-enter-x, -65px),
+        25px,
+        0
+    ) scale(.94);
+
+    transform-origin: center bottom;
+
+    transition:
+        opacity 1.05s ease,
+        filter 1.1s ease,
+        transform 1.25s cubic-bezier(.16, 1, .3, 1);
+}
+
+/* SCROLL REVEAL */
+
+body.dc-lantern-v6-page .dc-lantern-decor.is-visible {
+    opacity: 1;
+    filter: blur(0);
+    transform: translate3d(0, 0, 0) scale(1);
+}
+
+/* FLOATING ANIMATION */
+
+body.dc-lantern-v6-page .dc-lantern-decor__float {
+    display: block;
+    width: 100%;
+
+    opacity: var(--dc-lantern-proximity, .1);
+
+    transition: opacity .18s linear;
+
+    animation: dc-lantern-float-v6 7s ease-in-out infinite;
+}
+
+body.dc-lantern-v6-page
+.dc-lantern-decor[data-position^="bottom"]
+.dc-lantern-decor__float {
+    animation-delay: -3.5s;
+}
+
+/* IMAGE */
+
+body.dc-lantern-v6-page .dc-lantern-decor__image {
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+
+    object-fit: contain;
+
+    filter: drop-shadow(
+        0 0 14px rgba(32, 196, 90, .23)
+    );
+}
+
+@keyframes dc-lantern-float-v6 {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+/* ========================================================
+   SCREEN EDGE POSITIONING
+   ======================================================== */
+
+body.dc-lantern-v6-page {
+    --dc-overhang: 50px;
+}
+
+/* LEFT SIDE */
+
+body.dc-lantern-v6-page
+.dc-lantern-decor[data-position$="left"] {
+    left: calc(50% - 50vw - var(--dc-overhang));
+    right: auto;
+
+    --dc-enter-x: -70px;
+}
+
+/* RIGHT SIDE */
+
+body.dc-lantern-v6-page
+.dc-lantern-decor[data-position$="right"] {
+    right: calc(50% - 50vw - var(--dc-overhang));
+    left: auto;
+
+    --dc-enter-x: 70px;
+}
+
+/* ========================================================
+   START HERE PAGE
+   ======================================================== */
+
+/* KOENA — UPPER LEFT */
+/* Very slightly smaller */
+
+body.dc-lantern-v6-start
+.dc-lantern-decor[data-character="koena"] {
+    top: 365px;
+
+    width: clamp(220px, 26vw, 330px);
+}
+
+/* KAGISO — LOWER RIGHT */
+/* Slightly bigger */
+
+body.dc-lantern-v6-start
+.dc-lantern-decor[data-character="kagiso"] {
+    bottom: 45px;
+
+    width: clamp(220px, 24vw, 490px);
+}
+
+/* ========================================================
+   SAVED PAGE
+   ======================================================== */
+
+body.dc-lantern-v6-saved .saved-section {
+    min-height: 720px;
+}
+
+/* THATO — UPPER RIGHT */
+/* Smaller and slightly further inward */
+
+body.dc-lantern-v6-saved
+.dc-lantern-decor[data-character="thato"] {
+    top: 140px;
+
+    width: clamp(220px, 24vw, 345px);
+
+    right: calc(
+        50% - 50vw - var(--dc-overhang) + 35px
+    );
+}
+
+/* TSHIAMO — LOWER LEFT */
+/* Unchanged */
+
+body.dc-lantern-v6-saved
+.dc-lantern-decor[data-character="tshiamo"] {
+    bottom: 45px;
+
+    width: clamp(255px, 29vw, 400px);
+}
+
+/* ========================================================
+   TABLET RESPONSIVENESS
+   ======================================================== */
+
+@media (max-width: 900px) {
+
+    body.dc-lantern-v6-page {
+        --dc-overhang: 65px;
+    }
+
+    body.dc-lantern-v6-page .dc-lantern-decor {
+        width: clamp(195px, 31vw, 295px) !important;
+    }
+
+    body.dc-lantern-v6-start
+    .dc-lantern-decor[data-character="koena"] {
+        top: 420px;
+    }
+
+    body.dc-lantern-v6-saved
+    .dc-lantern-decor[data-character="thato"] {
+        width: clamp(175px, 25vw, 250px) !important;
+    }
+}
+
+/* ========================================================
+   MOBILE RESPONSIVENESS
+   ======================================================== */
+
+@media (max-width: 600px) {
+
+    body.dc-lantern-v6-page {
+        --dc-overhang: 75px;
+    }
+
+    body.dc-lantern-v6-page .dc-lantern-decor {
+        width: 185px !important;
+    }
+
+    body.dc-lantern-v6-start
+    .dc-lantern-decor[data-character="koena"] {
+        top: 490px;
+    }
+
+    body.dc-lantern-v6-saved
+    .dc-lantern-decor[data-character="thato"] {
+        top: 190px;
+
+        width: 160px !important;
+    }
+
+    body.dc-lantern-v6-saved .saved-section {
+        min-height: 650px;
+    }
+}
+
+/* ========================================================
+   REDUCED MOTION ACCESSIBILITY
+   ======================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    body.dc-lantern-v6-page .dc-lantern-decor {
+        filter: none;
+        transform: none;
+        transition: none;
+    }
+
+    body.dc-lantern-v6-page .dc-lantern-decor__float {
+        animation: none;
+        transition: none;
+    }
+}

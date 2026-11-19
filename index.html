@@ -1,0 +1,274 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="css/art-interactions.css">
+<head>
+    <link rel="stylesheet" href="css/terminal-type.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Detective Corps</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.14.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.14.2/ScrollTrigger.min.js"></script>
+</head>
+
+<script src="js/art-interactions.js"></script>
+
+<body>
+
+    <header class="site-header">
+        <a href="index.html" class="logo">
+            THE DETECTIVE CORPS
+        </a>
+
+        <nav class="navigation" aria-label="Main navigation">
+    <a href="index.html" aria-current="page">Home</a>
+    <a href="start-here.html">Start Here</a>
+    <a href="saved.html">Saved</a>
+</nav>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+
+        <section class="hero">
+            <div class="hero-content">
+
+                <!-- YOUR MANUAL LOGO ARTWORK -->
+                <img
+                    src="assests/images/logo.png"
+                    alt="The Detective Corps Logo"
+                    class="hero-logo"
+                >
+
+                <p class="eyebrow">
+                    [YOUR DC COMICS INDEX]
+                </p>
+
+                <h1>
+                    ENTER THE<br>
+                    DC UNIVERSE.
+                </h1>
+
+                <p class="hero-description">
+                    Your guide to the world of DC.
+                    Uncover what makes its heroes legendary,
+                    explore what they stand for, and find your
+                    first story. No prior comic-book knowledge
+                    needed!
+                </p>
+
+                <a href="start-here.html" class="button-primary">
+                    START INVESTIGATING
+                </a>
+
+            </div>
+        </section>
+
+        <!-- CHARACTER SEARCH -->
+
+        <section class="character-section">
+
+            <h2>OPEN A CASE FILE</h2>
+
+            <p>Search for a DC character.</p>
+
+            <label for="character-search">
+                
+            </label>
+
+            <input
+                type="text"
+                id="character-search"
+                placeholder="Search for Batman, Superman..."
+            >
+
+            <div id="search-results"></div>
+
+        </section>
+
+        <!-- FEATURED CHARACTERS -->
+
+        <section class="featured-section">
+
+            <h2>FEATURED CHARACTERS</h2>
+
+            <div class="character-grid">
+
+                <article class="character-card">
+
+                    <div class="featured-image-container">
+                        <img
+                            data-character-image="Batman"
+                            alt="Batman"
+                            loading="lazy"
+                        >
+
+                        <span class="image-auto-fallback" style="display:none;">
+                            IMAGE UNAVAILABLE
+                        </span>
+                    </div>
+
+                    <div class="featured-card-content">
+                        <h3>BATMAN</h3>
+
+                        <p>
+                            The Dark Knight. A symbol of justice,
+                            fear, and human determination.
+                        </p>
+
+                        <a href="character.html?id=batman">
+                            OPEN CASE FILE
+                        </a>
+                    </div>
+
+                </article>
+
+                <article class="character-card">
+
+                    <div class="featured-image-container">
+                        <img
+                            data-character-image="John Stewart"
+                            alt="John Stewart as Green Lantern"
+                            loading="lazy"
+                        >
+
+                        <span class="image-auto-fallback" style="display:none;">
+                            IMAGE UNAVAILABLE
+                        </span>
+                    </div>
+
+                    <div class="featured-card-content">
+                        <h3>GREEN LANTERN</h3>
+
+                        <p>
+                            John Stewart. A hero whose greatest
+                            weapon is the power of will.
+                        </p>
+
+                        <a href="character.html?id=green-lantern">
+                            OPEN CASE FILE
+                        </a>
+                    </div>
+
+                </article>
+
+                <article class="character-card">
+
+                    <div class="featured-image-container">
+                        <img
+                            data-character-image="Superman"
+                            alt="Superman"
+                            loading="lazy"
+                        >
+
+                        <span class="image-auto-fallback" style="display:none;">
+                            IMAGE UNAVAILABLE
+                        </span>
+                    </div>
+
+                    <div class="featured-card-content">
+                        <h3>SUPERMAN</h3>
+
+                        <p>
+                            The Man of Steel. A symbol of hope
+                            and compassion.
+                        </p>
+
+                        <a href="character.html?id=superman">
+                            OPEN CASE FILE
+                        </a>
+                    </div>
+
+                </article>
+
+                <article class="character-card">
+
+                    <div class="featured-image-container">
+                        <img
+                            data-character-image="Wally West"
+                            alt="Wally West as The Flash"
+                            loading="lazy"
+                        >
+
+                        <span class="image-auto-fallback" style="display:none;">
+                            IMAGE UNAVAILABLE
+                        </span>
+                    </div>
+
+                    <div class="featured-card-content">
+                        <h3>THE FLASH</h3>
+
+                        <p>
+                            The fastest man alive. A hero defined
+                            by family and responsibility.
+                        </p>
+
+                        <a href="character.html?id=flash">
+                            OPEN CASE FILE
+                        </a>
+                    </div>
+
+                </article>
+
+            </div>
+        </section>
+
+        <!-- FOUNDER'S NOTE -->
+
+        <section class="character-section founder-note">
+
+            <h2>A NOTE FROM THE FOUNDER</h2>
+
+            <p>
+                These are four of the heroes who got me into
+                the DC Universe. Each represents something
+                different about what makes these stories
+                worth exploring.
+            </p>
+
+            <p>
+                Batman introduced me to the darker,
+                detective-driven side of DC. John Stewart
+                showed me the scale of its cosmic universe
+                and the power of will. Superman represents
+                the hope at the heart of these stories, while
+                Wally West brings the personality and legacy
+                of the Flash.
+            </p>
+
+            <p>
+                The Detective Corps is my way of sharing
+                that enthusiasm and helping new readers
+                find their own way into the world of DC Comics.
+            </p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            The Detective Corps is an independent fan-made
+            educational project. It is not affiliated with DC.
+        </p>
+    </footer>
+
+    <script src="js/images.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+
+    <script
+    src="./js/terminal-type.js?v=3"
+    onload="console.log('TERMINAL FILE LOADED')"
+    onerror="console.error('TERMINAL FILE NOT FOUND')"
+></script>
+
+</body>
+</html>

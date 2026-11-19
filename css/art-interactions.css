@@ -1,0 +1,112 @@
+/* The Detective Corps — artwork layout and interaction */
+.hero:has(.dc-john-art) {
+  position: relative;
+  isolation: isolate;
+  min-height: 620px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding-top: 390px;
+}
+.hero:has(.dc-john-art) .hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: min(58%, 690px);
+  padding-top: 28px;
+  padding-bottom: 35px;
+}
+/* The logo is moved out of .hero-content into its own full-width hero child.
+   This eliminates the left-column positioning conflict entirely. */
+.hero .dc-hero-logo-slot {
+  position: absolute !important;
+  top: 45px !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  height: 300px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  pointer-events: none;
+}
+.hero .dc-hero-logo-slot > .hero-logo {
+  position: static !important;
+  display: block !important;
+  width: min(440px, 75vw) !important;
+  max-width: 100% !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  inset: auto !important;
+  left: auto !important;
+  right: auto !important;
+  top: auto !important;
+  translate: none !important;
+  transform: none !important;
+}
+.dc-john-art {position:absolute;right:0;bottom:0;width:44%;height:100%;max-height:760px;display:flex;align-items:flex-end;justify-content:center;pointer-events:auto;z-index:1;}
+.dc-john-img {position:relative;display:block;width:100%;height:94%;object-fit:contain;object-position:bottom center;filter:drop-shadow(0 0 28px rgba(30,230,92,.23));transform-origin:center bottom;transition:filter .25s ease;}
+.dc-john-art:hover .dc-john-img {filter:drop-shadow(0 0 42px rgba(30,230,92,.52));}
+.dc-john-halo {position:absolute;width:80%;aspect-ratio:1;bottom:18%;left:10%;border-radius:50%;background:radial-gradient(circle,rgba(29,227,92,.28),rgba(29,227,92,.07) 45%,transparent 72%);pointer-events:none;}
+.dc-john-caption,.dc-guy-tag {position:absolute;z-index:2;bottom:18px;right:10px;font-family:'Courier Prime',monospace;font-weight:bold;font-size:13px;letter-spacing:.07em;color:#20c45a;background:rgba(10,20,13,.88);padding:9px 12px;border-left:3px solid #20c45a;}
+.dc-john-caption span,.dc-guy-tag span {display:block;color:#dce9df;font-size:10px;margin-top:4px;}
+.dc-search-top {margin:22px 0 18px !important;padding:16px 18px !important;width:100%;max-width:590px;background:rgba(12,24,17,.92);border:1px solid rgba(32,196,90,.38);box-sizing:border-box;}
+.dc-search-top h2 {font-size:clamp(16px,2vw,24px);margin:0 0 6px;}
+.dc-search-top p {margin:0 0 8px;}
+.dc-search-top label {display:block;margin:0 0 5px;}
+.dc-search-top input {box-sizing:border-box;width:100%;max-width:100%;}
+.dc-search-top #search-results {position:relative;z-index:15;max-height:320px;overflow-y:auto;}
+.start-hero:has(.dc-guy-art) {position:relative;isolation:isolate;overflow:hidden;min-height:500px;padding-right:min(43%,430px);box-sizing:border-box;}
+.dc-guy-art {position:absolute;right:0;bottom:0;width:min(43%,430px);height:100%;display:flex;align-items:flex-end;justify-content:center;z-index:2;animation:guyEntrance 1s cubic-bezier(.18,1.4,.4,1) both;}
+.dc-guy-img {display:block;position:relative;width:100%;height:100%;object-fit:contain;object-position:bottom center;filter:drop-shadow(0 0 15px rgba(32,196,90,.3));transform-origin:50% 80%;transition:transform .3s ease,filter .3s ease;}
+.dc-guy-art:hover .dc-guy-img {transform:rotate(-3deg) scale(1.04);filter:drop-shadow(0 0 35px rgba(32,196,90,.65));}
+.dc-guy-burst {position:absolute;inset:15% 3% 0;background:radial-gradient(ellipse at 45% 65%,rgba(32,196,90,.3),transparent 66%);animation:guyEnergy 2.5s ease-in-out infinite alternate;}
+.dc-guy-art:hover .dc-guy-burst {animation-duration:.7s;}
+.dc-guy-tag {bottom:10px;right:10px;}
+@keyframes guyEntrance {from{opacity:0;transform:translateX(100px) rotate(8deg) scale(.85)}to{opacity:1;transform:translateX(0) rotate(0) scale(1)}}
+@keyframes guyEnergy {from{opacity:.4;transform:scale(.9)}to{opacity:1;transform:scale(1.15)}}
+@media(max-width:800px){
+  .hero:has(.dc-john-art){display:block;min-height:0;overflow:hidden;padding-top:270px;}
+  .hero:has(.dc-john-art) .hero-content{max-width:100%;padding-bottom:0;}
+  .hero .dc-hero-logo-slot{top:20px !important;height:220px;}
+  .hero .dc-hero-logo-slot > .hero-logo{width:min(320px,80vw) !important;}
+  .dc-john-art{position:relative;margin:0 auto;width:min(85%,390px);height:360px;max-height:none;}
+  .dc-john-img{height:100%;}
+  .start-hero:has(.dc-guy-art){padding-right:0;padding-bottom:0;min-height:0;}
+  .dc-guy-art{position:relative;margin:15px auto 0;width:min(85%,370px);height:390px;}
+}
+@media(max-width:440px){.dc-john-art{height:290px}.dc-guy-art{height:310px}.dc-john-caption,.dc-guy-tag{font-size:11px}.dc-search-top{padding:12px!important}}
+@media(prefers-reduced-motion:reduce){.dc-john-img,.dc-guy-img,.dc-guy-burst{transition:none!important}.dc-guy-art,.dc-guy-burst{animation:none!important}}
+
+/* ==========================================
+   JOHN STEWART — FULL HEIGHT ARTWORK
+========================================== */
+
+@media (min-width: 801px) {
+
+    .hero:has(.dc-john-art) .dc-john-art {
+        position: absolute;
+        right: 0;
+        top: 260px;
+        bottom: 0;
+
+        width: 44%;
+        height: auto;
+        max-height: none;
+
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+    .hero:has(.dc-john-art) .dc-john-img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: contain;
+        object-position: bottom center;
+
+        transform-origin: center bottom;
+    }
+}

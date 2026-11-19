@@ -1,0 +1,546 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="css/art-interactions.css">
+<head>
+
+    <link rel="stylesheet" href="css/terminal-type.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Start Here | The Detective Corps</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/terminal-type.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/lantern-scroll-v6.css?v=6">
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.14.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.14.2/ScrollTrigger.min.js"></script>
+</head>
+
+<script src="js/art-interactions.js"></script>
+
+<body>
+
+    <header class="site-header">
+
+        <a href="index.html" class="logo">
+            THE DETECTIVE CORPS
+        </a>
+
+        <nav class="navigation" aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="start-here.html" aria-current="page">Start Here</a>
+    <a href="saved.html">Saved</a>
+</nav>
+
+    </header>
+
+    <main class="subpage-main">
+
+        <!-- HERO -->
+
+        <section class="page-hero start-hero">
+
+            <div class="dc-guy-art">
+    <div class="dc-guy-burst" aria-hidden="true"></div>
+
+    <img
+        src="assests/images/guy-gardner-art.png"
+        alt="Guy Gardner saying Yes, Mr. Guardian, sir!"
+        class="dc-guy-img"
+        loading="eager"
+    >
+
+    <div class="dc-guy-tag">
+        GUY GARDNER
+        <span>UNSOLICITED ADVICE DEPARTMENT</span>
+    </div>
+</div>
+
+            <p class="eyebrow">
+                YOUR FIRST INVESTIGATION
+            </p>
+
+            <h1>
+                WHERE DO<br>
+                YOU BEGIN?
+            </h1>
+
+            <p class="hero-description">
+                DC has decades of stories, alternate timelines and
+                different versions of its heroes. You don't needa
+                to know all of that to start. 
+                
+                Choose the kind of
+                story that interests you and let us point you
+                in the right direction.
+            </p>
+
+        </section>
+
+        <!-- READING PATHS -->
+
+        <section class="reading-paths section-reveal">
+
+            <div class="paths-heading">
+
+                <p class="eyebrow">FIND YOUR WAY INTO DC</p>
+
+                <h2>CHOOSE A READING PATH</h2>
+
+                <p class="section-intro">
+                    Not sure which hero to explore first? These paths
+                    introduce you to different sides of the DC Universe.
+                    Pick whichever sounds most interesting.
+                </p>
+
+            </div>
+
+            <div class="path-grid">
+
+                <!-- 01 -->
+
+                <article class="path-card">
+
+                    <span class="path-number">01 / STREET LEVEL</span>
+
+                    <img class="path-card-image"
+                         data-character-image="Batman"
+                         alt="Batman"
+                         loading="lazy">
+
+                    <span class="image-auto-fallback" style="display:none;">
+                        IMAGE UNAVAILABLE
+                    </span>
+
+                    <h3>DARK &amp; DETECTIVE</h3>
+
+                    <p>
+                        Crime, mystery, difficult choices and heroes
+                        who rely on intelligence as much as physical
+                        ability. Explore the darker, grounded side of DC.
+                    </p>
+
+                    <div class="path-meta">
+                        <strong>START WITH:</strong> Batman
+                    </div>
+
+                    <div class="path-meta">
+                        <strong>EXPLORE:</strong> Batwoman, The Question, Red Hood
+                    </div>
+
+                    <div class="path-meta">
+                        <strong>GOOD FOR:</strong> Mystery and grounded stories
+                    </div>
+
+                    <a class="button-primary" href="character.html?id=batman">
+                        OPEN BATMAN CASE FILE
+                    </a>
+
+                </article>
+
+                <!-- 02 -->
+
+                <article class="path-card">
+
+                    <span class="path-number">02 / COSMIC</span>
+
+                    <img class="path-card-image"
+                         data-character-image="John Stewart"
+                         alt="John Stewart as Green Lantern"
+                         loading="lazy">
+
+                    <span class="image-auto-fallback" style="display:none;">
+                        IMAGE UNAVAILABLE
+                    </span>
+
+                    <h3>COSMIC &amp; COURAGEOUS</h3>
+
+                    <p>
+                        Space, responsibility, willpower and ordinary
+                        people facing challenges much bigger than
+                        themselves. Explore the cosmic side of DC.
+                    </p>
+
+                    <div class="path-meta">
+                        <strong>START WITH:</strong> John Stewart
+                    </div>
+
+                    <div class="path-meta">
+                        <strong>EXPLORE:</strong> Hal Jordan, Green Lantern Corps, Martian Manhunter
+                    </div>
+
+                    <div class="path-meta">
+                        <strong>GOOD FOR:</strong> Science fiction and big ideas
+                    </div>
+
+                    <a class="button-primary" href="character.html?id=green-lantern">
+                        OPEN GREEN LANTERN CASE FILE
+                    </a>
+
+                </article>
+
+                <!-- 03 -->
+
+                <article class="path-card">
+
+                    <span class="path-number">03 / HOPE</span>
+
+                    <img class="path-card-image"
+                         data-character-image="Superman"
+                         alt="Superman"
+                         loading="lazy">
+
+                    <span class="image-auto-fallback" style="display:none;">
+                        IMAGE UNAVAILABLE
+                    </span>
+
+                    <h3>A HERO'S JOURNEY</h3>
+
+                    <p>
+                        Hope, compassion, belonging and how someone
+                        with extraordinary power chooses to help.
+                        Discover the ideals at the heart of DC.
+                    </p>
+
+                    <div class="path-meta">
+                        <strong>START WITH:</strong> Superman
+                    </div>
+
+                    <div class="path-meta">
+                        <strong>EXPLORE:</strong> Supergirl, Superboy, Krypto
+                    </div>
+
+                    <div class="path-meta">
+                        <strong>GOOD FOR:</strong> Inspirational and character-driven stories
+                    </div>
+
+                    <a class="button-primary" href="character.html?id=superman">
+                        OPEN SUPERMAN CASE FILE
+                    </a>
+
+                </article>
+
+                <!-- 04 -->
+
+                <article class="path-card">
+
+                    <span class="path-number">04 / LEGACY</span>
+
+                    <img class="path-card-image"
+                         data-character-image="Wally West"
+                         alt="Wally West as The Flash"
+                         loading="lazy">
+
+                    <span class="image-auto-fallback" style="display:none;">
+                        IMAGE UNAVAILABLE
+                    </span>
+
+                    <h3>SPEED &amp; FAMILY</h3>
+
+                    <p>
+                        The Speed Force, family, friendship and the
+                        consequences of moving faster than the world
+                        around you. Discover the many generations of
+                        the Flash.
+                    </p>
+
+                    <div class="path-meta">
+                        <strong>START WITH:</strong> Wally West
+                    </div>
+
+                    <div class="path-meta">
+                        <strong>EXPLORE:</strong> Barry Allen, Jay Garrick, Bart Allen
+                    </div>
+
+                    <div class="path-meta">
+                        <strong>GOOD FOR:</strong> Adventure, relationships and legacy
+                    </div>
+
+                    <a class="button-primary" href="character.html?id=flash">
+                        OPEN FLASH CASE FILE
+                    </a>
+
+                </article>
+
+                <!-- 05 -->
+
+                <article class="path-card">
+
+                    <span class="path-number">05 / MYTH &amp; MAGIC</span>
+
+                    <img class="path-card-image"
+                         data-character-image="Wonder Woman"
+                         alt="Wonder Woman"
+                         loading="lazy">
+
+                    <span class="image-auto-fallback" style="display:none;">
+                        IMAGE UNAVAILABLE
+                    </span>
+
+                    <h3>GODS, MYTHS &amp; MAGIC</h3>
+
+                    <p>
+                        Ancient mythology, powerful gods, spells and
+                        supernatural forces. Discover the magical
+                        corners of the DC Universe.
+                    </p>
+
+                    <div class="path-meta">
+                        <strong>EXPLORE:</strong> Wonder Woman, Zatanna, Shazam, John Constantine
+                    </div>
+
+                    <div class="path-meta">
+                        <strong>GOOD FOR:</strong> Fantasy, mythology and magic
+                    </div>
+
+                    <a class="button-primary" href="index.html">
+                        EXPLORE THESE CHARACTERS
+                    </a>
+
+                </article>
+
+                <!-- 06 -->
+
+                <article class="path-card">
+
+                    <span class="path-number">06 / NEXT GENERATION</span>
+
+                    <img class="path-card-image"
+                         data-character-image="Nightwing"
+                         alt="Nightwing"
+                         loading="lazy">
+
+                    <span class="image-auto-fallback" style="display:none;">
+                        IMAGE UNAVAILABLE
+                    </span>
+
+                    <h3>YOUNG HEROES &amp; LEGACY</h3>
+
+                    <p>
+                        Sidekicks becoming heroes in their own right,
+                        young teams finding their place and the next
+                        generation carrying on a legacy.
+                    </p>
+
+                    <div class="path-meta">
+                        <strong>EXPLORE:</strong> Nightwing, Robin, Raven, Starfire, Superboy
+                    </div>
+
+                    <div class="path-meta">
+                        <strong>GOOD FOR:</strong> Coming-of-age and team stories
+                    </div>
+
+                    <a class="button-primary" href="index.html">
+                        EXPLORE THESE CHARACTERS
+                    </a>
+
+                </article>
+
+                <!-- 07 -->
+
+                <article class="path-card">
+
+                    <span class="path-number">07 / ALLIANCES</span>
+
+            <img
+    class="path-card-image"
+    src="assests/images/justice-league.jpg"
+    alt="The Justice League"
+    loading="lazy"
+>
+
+
+                    <span class="image-auto-fallback" style="display:none;">
+                        IMAGE UNAVAILABLE
+                    </span>
+
+                    <h3>TEAMS &amp; ALLIANCES</h3>
+
+                    <p>
+                        Some heroes work better together. Discover
+                        the teams, rivalries and alliances that bring
+                        the DC Universe to life.
+                    </p>
+
+                    <div class="path-meta">
+                        <strong>EXPLORE:</strong> Justice League, Titans, Justice Society
+                    </div>
+
+                    <div class="path-meta">
+                        <strong>GOOD FOR:</strong> Team dynamics and large-scale adventures
+                    </div>
+
+                    <a class="button-primary" href="index.html">
+                        EXPLORE THESE CHARACTERS
+                    </a>
+
+                </article>
+
+                <!-- 08 -->
+
+                <article class="path-card">
+
+                    <span class="path-number">08 / THE OTHER SIDE</span>
+
+                    <img class="path-card-image"
+                         data-character-image="Joker"
+                         alt="Joker"
+                         loading="lazy">
+
+                    <span class="image-auto-fallback" style="display:none;">
+                        IMAGE UNAVAILABLE
+                    </span>
+
+                    <h3>VILLAINS &amp; ANTIHEROES</h3>
+
+                    <p>
+                        Not every story is told from the hero's side.
+                        Explore complicated motives, iconic rivalries
+                        and characters who exist somewhere between
+                        hero and villain.
+                    </p>
+
+                    <div class="path-meta">
+                        <strong>EXPLORE:</strong> Joker, Lex Luthor, Harley Quinn, Catwoman
+                    </div>
+
+                    <div class="path-meta">
+                        <strong>GOOD FOR:</strong> Complex characters and moral ambiguity
+                    </div>
+
+                    <a class="button-primary" href="index.html">
+                        EXPLORE THESE CHARACTERS
+                    </a>
+
+                </article>
+
+                <!-- 09 -->
+
+                <article class="path-card">
+
+                    <span class="path-number">09 / THE UNKNOWN</span>
+
+                    <img class="path-card-image"
+                         data-character-image="Swamp Thing"
+                         alt="Swamp Thing"
+                         loading="lazy">
+
+                    <span class="image-auto-fallback" style="display:none;">
+                        IMAGE UNAVAILABLE
+                    </span>
+
+                    <h3>STRANGE &amp; SUPERNATURAL</h3>
+
+                    <p>
+                        Monsters, horror, strange dimensions and
+                        supernatural mysteries. Explore the stranger
+                        and sometimes darker corners of DC.
+                    </p>
+
+                    <div class="path-meta">
+                        <strong>EXPLORE:</strong> Swamp Thing, Etrigan, Deadman, The Spectre
+                    </div>
+
+                    <div class="path-meta">
+                        <strong>GOOD FOR:</strong> Horror, mystery and the unexplained
+                    </div>
+
+                    <a class="button-primary" href="index.html">
+                        EXPLORE THESE CHARACTERS
+                    </a>
+
+                </article>
+
+                <!-- 10 -->
+
+                <article class="path-card">
+
+                    <span class="path-number">10 / ALTERNATE REALITIES</span>
+
+                    <img class="path-card-image"
+                         data-character-image="Flashpoint"
+                         alt="Flashpoint"
+                         loading="lazy">
+
+                    <span class="image-auto-fallback" style="display:none;">
+                        IMAGE UNAVAILABLE
+                    </span>
+
+                    <h3>MULTIVERSE &amp; ELSEWORLDS</h3>
+
+                    <p>
+                        What if things happened differently? Explore
+                        alternate realities, unexpected versions of
+                        familiar heroes and stories outside the
+                        main continuity.
+                    </p>
+
+                    <div class="path-meta">
+                        <strong>EXPLORE:</strong> Flashpoint, Kingdom Come, Injustice
+                    </div>
+
+                    <div class="path-meta">
+                        <strong>GOOD FOR:</strong> Alternate timelines and experimental stories
+                    </div>
+
+                    <a class="button-primary" href="index.html">
+                        EXPLORE THESE STORIES
+                    </a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- BEGINNER NOTE -->
+
+        <section class="beginner-note section-reveal">
+
+            <h2>NEW TO COMICS?</h2>
+
+            <p>
+                You're not expected to understand every reference,
+                timeline or character. These paths are just recommendations,
+                no strict reading order, chum. 
+                If something catches your interest, just dive right in.
+            </p>
+
+            <a href="index.html" class="text-link">
+                ← RETURN TO HOME
+            </a>
+
+        </section>
+
+    </main>
+
+<!-- 
+     THE DETECTIVE CORPS — FOOTER
+ -->
+
+<footer class="site-footer" data-no-type>
+    <p>
+        The Detective Corps is an independent fan-made educational project.
+        It is not affiliated with DC.
+        Comic data sourced from Comic Vine.
+    </p>
+
+</footer>
+    <footer>
+        <p>
+            The Detective Corps is an independent fan-made
+            educational project. It is not affiliated with DC.
+        </p>
+    </footer>
+
+    <script src="js/images.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="./js/terminal-type.js?v=3"></script>
+    <script src="js/lantern-scroll-v6.js?v=6"></script>
+</body>
+</html>

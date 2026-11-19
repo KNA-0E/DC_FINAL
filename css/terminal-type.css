@@ -1,0 +1,30 @@
+/* The Detective Corps — terminal typewriter (outside cards only) */
+.terminal-letter {
+    opacity: 0;
+    transition: none;
+}
+.terminal-letter.terminal-visible {
+    opacity: 1;
+}
+.terminal-letter.terminal-cursor {
+    position: relative;
+}
+.terminal-letter.terminal-cursor::after {
+    content: "";
+    position: absolute;
+    left: 100%;
+    top: 0;
+    height: 1em;
+    width: 2px;
+    background: #20c45a;
+    box-shadow: 0 0 7px rgba(32, 196, 90, .65);
+    animation: terminal-blink .55s steps(1, end) infinite;
+    pointer-events: none;
+}
+@keyframes terminal-blink {
+    50% { opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .terminal-letter { opacity: 1 !important; }
+    .terminal-letter.terminal-cursor::after { display: none; }
+}

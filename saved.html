@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/terminal-type.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Saved Characters | The Detective Corps</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/terminal-type.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/lantern-scroll-v6.css?v=6">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.14.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.14.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+
+    <header class="site-header">
+
+        <a href="index.html" class="logo">
+            THE DETECTIVE CORPS
+        </a>
+
+       <nav class="navigation" aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="start-here.html">Start Here</a>
+    <a href="saved.html" aria-current="page">Saved</a>
+</nav>
+
+    </header>
+
+    <main class="subpage-main">
+
+        <section class="page-hero compact-hero">
+
+            <p class="eyebrow">
+                YOUR PERSONAL ARCHIVE
+            </p>
+
+            <h1>
+                SAVED<br>
+                CHARACTERS.
+            </h1>
+
+            <p class="hero-description">
+                Your bookmarked case files are kept here
+                in this browser.
+            </p>
+
+        </section>
+
+        <section class="saved-section section-reveal">
+
+            <div class="section-heading-row">
+
+                <h2>YOUR CASE FILES</h2>
+
+                <span id="saved-count" class="saved-count">
+                    0 SAVED
+                </span>
+
+            </div>
+
+            <div
+                id="saved-character-grid"
+                class="character-grid"
+            >
+                <p class="loading-state">
+                    CHECKING YOUR ARCHIVE...
+                </p>
+            </div>
+
+            <div
+                id="saved-empty-state"
+                class="empty-panel"
+                hidden
+            >
+
+                <h3>NO CASE FILES SAVED YET.</h3>
+
+                <p>
+                    Start investigating and bookmark a character
+                    to keep their case file here.
+                </p>
+
+                <a href="index.html" class="button-primary">
+                    EXPLORE CHARACTERS
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            The Detective Corps is an independent fan-made
+            educational project. It is not affiliated with DC.
+        </p>
+    </footer>
+
+    <script src="js/images.js"></script>
+    <script src="js/saved.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="./js/terminal-type.js?v=3"></script>
+    <script src="js/lantern-scroll-v6.js?v=6"></script>
+
+    
+
+
+
+</body>
+</html>
